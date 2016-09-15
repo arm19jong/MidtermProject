@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.teamsmokeweed.midtermproject.MainActivity">
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:id="@+id/textView1"
+        android:layout_marginTop="14dp"
+        android:textSize="14dp"
+        />
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView1"
+        android:hint="sampleinput"
+        android:id="@+id/editText1"
+        android:textSize="14dp"
+
+        />
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:id="@+id/textView2"
+        android:layout_below="@id/textView1"
+        android:layout_marginTop="14dp"
+        android:textSize="14dp"
+        />
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView1"
+        android:layout_below="@id/textView1"
+        android:hint="samplepass"
+        android:id="@+id/editText2"
+        android:textSize="14dp"
+        android:inputType="textPassword"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="ClearText"
+        android:id="@+id/button1"
+        android:layout_below="@id/editText2"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check1"
+        android:id="@+id/checkbox1"
+        android:layout_below="@id/button1"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check2"
+        android:id="@+id/checkbox2"
+        android:layout_below="@id/checkbox1"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check3"
+        android:id="@+id/checkbox3"
+        android:layout_below="@id/checkbox2"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkbox3"
+        android:text="Check1"
+        android:textColor="#ff0000"
+        android:id="@+id/checktext1"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/checktext1"
+        android:layout_below="@id/checkbox3"
+        android:text="Check2"
+        android:textColor="#ff0000"
+        android:id="@+id/checktext2"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/checktext2"
+        android:layout_below="@id/checkbox3"
+        android:text="Check3"
+        android:textColor="#ff0000"
+        android:id="@+id/checktext3"
+
+        />
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checktext3"
+        android:id="@+id/ToggleButton1"
+        />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checktext3"
+        android:layout_toRightOf="@id/ToggleButton1"
+        android:id="@+id/Switch1"
+        />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ToggleButton1"
+        android:max="100"
+        android:id="@+id/seekbar1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar1"
+        android:id="@+id/textView3"
+        />
+
+
+
+</RelativeLayout>
