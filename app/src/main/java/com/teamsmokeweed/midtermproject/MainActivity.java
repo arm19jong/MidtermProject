@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //get
         editText1 = (EditText)findViewById(R.id.editText1);
         textview1 = (TextView)findViewById(R.id.textView1);
         editText2 = (EditText)findViewById(R.id.editText2);
