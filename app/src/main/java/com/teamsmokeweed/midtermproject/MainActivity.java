@@ -149,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Activity2.class);
                 startActivity(i);
+
             }
         });
 
