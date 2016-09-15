@@ -1,5 +1,6 @@
 package com.teamsmokeweed.midtermproject;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText editText1, editText2;
     TextView textview1, textview2, checktext1, checktext2, checktext3, textview3;
-    Button button1;
+    Button button1, activity_2;
     CheckBox checkBox1,checkBox2,checkBox3;
     ToggleButton toggleButton1;
     Switch switch1;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         switch1 = (Switch)findViewById(R.id.Switch1);
         seekbar1 = (SeekBar)findViewById(R.id.seekbar1);
         textview3 = (TextView)findViewById(R.id.textView3);
+        activity_2 = (Button)findViewById(R.id.ToActivity2);
 
 
         editText1.addTextChangedListener(new TextWatcher() {
@@ -140,6 +142,14 @@ public class MainActivity extends AppCompatActivity {
                 //Toast.makeText(getApplicationContext(), "Stopped tracking seekbar", Toast.LENGTH_SHORT).show();
             }
 
+        });
+
+        activity_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), Activity2.class);
+                startActivity(i);
+            }
         });
 
     }

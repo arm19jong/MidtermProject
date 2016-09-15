@@ -134,6 +134,15 @@
         android:layout_below="@id/seekbar1"
         android:id="@+id/textView3"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ToActivity2"
+        android:layout_below="@id/textView3"
+        android:textAllCaps="false"
+        android:text="Activity_2"
+        android:textSize="40sp"
+        />
 
 
 
