@@ -20,7 +20,7 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText editText1, editText2;
+    EditText editText1, editText2, sendText, resultText;
     TextView textview1, textview2, checktext1, checktext2, checktext3, textview3;
     Button button1, activity_2;
     CheckBox checkBox1,checkBox2,checkBox3;
@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         seekbar1 = (SeekBar)findViewById(R.id.seekbar1);
         textview3 = (TextView)findViewById(R.id.textView3);
         activity_2 = (Button)findViewById(R.id.ToActivity2);
+        sendText = (EditText)findViewById(R.id.SendText);
+        resultText = (EditText)findViewById(R.id.ResultText);
 
 
         editText1.addTextChangedListener(new TextWatcher() {
@@ -148,7 +150,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Activity2.class);
-                startActivity(i);
+                i.putExtra("sendTextStr",sendText.getText().toString() );
+                startActivityForResult(i, 1);
 
             }
         });
@@ -187,5 +190,14 @@ public class MainActivity extends AppCompatActivity {
         m_currentToast.setText(text);
         m_currentToast.setDuration(Toast.LENGTH_LONG);
         m_currentToast.show();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if(resultCode == RESULT_OK){
+            resultText.setText(data.getStringExtra("resultTextStr"));
+        }
+
     }
 }
