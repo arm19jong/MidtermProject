@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.teamsmokeweed.midtermproject.MainActivity">
 
+
     <TextView
         android:layout_width="130dp"
         android:layout_height="wrap_content"
@@ -168,7 +169,7 @@
             android:id="@+id/ResultText"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:ems="10" />
+            android:ems="50" />
 
 
 
