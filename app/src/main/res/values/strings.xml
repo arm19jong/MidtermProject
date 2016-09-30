@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MidtermProject</string>
+    <string name="action_favorite">SampleName</string>
+    <string name="action_settings">set</string>
 </resources>

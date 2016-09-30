@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         activity_2 = (Button)findViewById(R.id.ToActivity2);
         sendText = (EditText)findViewById(R.id.SendText);
         resultText = (EditText)findViewById(R.id.ResultText);
+
 
 
         editText1.addTextChangedListener(new TextWatcher() {
@@ -200,4 +203,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
 }
