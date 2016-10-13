@@ -183,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     Toast m_currentToast;
+
     void showToast(String text)
     {
         if(m_currentToast == null)
