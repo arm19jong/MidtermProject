@@ -40,5 +40,11 @@
         android:id="@+id/spinner"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true" />
+    <Spinner
+        android:id="@+id/simpleSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
 
 </LinearLayout>

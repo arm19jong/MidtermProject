@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,6 +22,9 @@ public class Activity2 extends Activity {
     TextView textView4;
     EditText result;
     Spinner spinner;
+    String[] countryNames={"India","China","Australia"};
+    int flags[] = {R.drawable.ic_favorite_border_black_48dp,R.drawable.ic_favorite_border_black_48dp,R.drawable.ic_favorite_border_black_48dp};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,24 @@ public class Activity2 extends Activity {
             }
         });
         //spinner.set
+
+        Spinner spin = (Spinner) findViewById(R.id.simpleSpinner);
+        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            //Performing action onItemSelected and onNothing selected
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {
+                Toast.makeText(getApplicationContext(), countryNames[position], Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+            }
+
+        });
+
+        CustomAdapter customAdapter=new CustomAdapter(getApplicationContext(),flags,countryNames);
+        spin.setAdapter(customAdapter);
 
     }
 
