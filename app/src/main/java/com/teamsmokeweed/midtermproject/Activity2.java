@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ public class Activity2 extends Activity {
     EditText result;
     Spinner spinner;
     String[] countryNames={"India","China","Australia"};
+    RadioButton radioButton, radioButton1;
     int flags[] = {R.drawable.ic_favorite_border_black_48dp,R.drawable.ic_favorite_border_black_48dp,R.drawable.ic_favorite_border_black_48dp};
 
 
@@ -33,6 +35,13 @@ public class Activity2 extends Activity {
 
         textView4 = (TextView)findViewById(R.id.textView4);
         result = (EditText)findViewById(R.id.ResultSample);
+
+        radioButton = (RadioButton) findViewById(R.id.radio_ninjas);
+        //radioButton1 = (RadioButton) findViewById(R.id.radio_pirates);
+
+//        Boolean bool = radioButton.isChecked();
+//        if (bool){
+//        showToast("boo");}
         Intent i = getIntent();
         String a = i.getStringExtra("sendTextStr");
         textView4.setText("Sent: "+a);
@@ -93,5 +102,28 @@ public class Activity2 extends Activity {
         m_currentToast.setText(text);
         m_currentToast.setDuration(Toast.LENGTH_LONG);
         m_currentToast.show();
+    }
+
+
+    public void onRadioButtonClicked(View view) {
+        //Boolean bool = radioButton1.isChecked();
+        Boolean bool2 = ((RadioButton) view) .isChecked();
+//        if (bool2){
+//            showToast("boooo");
+//        }
+//        else {showToast("nnnnnnnnn");}
+
+        switch (view.getId()){
+            case R.id.radio_pirates:
+                if(bool2){
+                    showToast("0000");
+                }
+                break;
+            case R.id.radio_ninjas:
+                if (bool2){
+                    showToast("1111");
+                }
+                break;
+        }
     }
 }
